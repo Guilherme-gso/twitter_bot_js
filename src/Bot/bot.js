@@ -1,5 +1,5 @@
-import client from '../auth/config';
 import Utils from './utils';
+import client from '../auth/config';
 
 const utils = new Utils();
 
@@ -25,7 +25,7 @@ class Bot {
 
       if(text.includes('RT @')) return;
 
-       if(!text.indexOf('.')) {
+       if(text.indexOf('.') < 0) {
           this.makeTweet(`${replaceTweet}`);
        }
 
